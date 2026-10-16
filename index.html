@@ -114,7 +114,24 @@ body {
     width: 100%;
   }
 }
-	</style>
+	
+/* New featured projects panel; isolated from the original resume layout. */
+.featured-work{background:#10151c;color:#f6f4ee;padding:62px 22px 68px;font-family:Arial,Helvetica,sans-serif}
+.featured-work-inner{max-width:1100px;margin:0 auto}
+.featured-eyebrow{color:#edaa6b;font-size:12px;font-weight:bold;letter-spacing:2px;text-transform:uppercase}
+.featured-heading{font-size:clamp(30px,4vw,46px);line-height:1.12;margin:12px 0 12px}
+.featured-intro{font-size:16px;color:#bcc3cc;line-height:1.65;max-width:750px;margin:0 0 27px}
+.featured-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
+.featured-card{background:#1d242d;border:1px solid #39414b;border-radius:10px;padding:25px 21px;display:flex;flex-direction:column;min-height:250px;transition:transform .2s,border-color .2s}
+.featured-card:hover{transform:translateY(-3px);border-color:#edaa6b}
+.featured-kicker{font-size:11px;color:#efb07e;text-transform:uppercase;font-weight:bold;letter-spacing:1.2px}
+.featured-card h3{font-size:23px;margin:18px 0 11px;line-height:1.2}
+.featured-card p{font-size:14px;line-height:1.6;color:#bfc5cd;margin:0 0 20px;flex:1}
+.featured-link{font-size:14px;font-weight:bold;color:#f5bf91;text-decoration:underline;text-underline-offset:4px}
+.featured-link:hover{color:white}
+@media(max-width:850px){.featured-grid{grid-template-columns:1fr}.featured-card{min-height:190px}.featured-work{padding:46px 20px}}
+
+</style>
 </head>
 <body>
 <div class="header">
@@ -122,7 +139,36 @@ body {
 <a class="mail" href="mailto:jonlukassen@gmail.com">jonlukassen@gmail.com</a><br />
 <a class="tel" href="tel:8043496152">(804) 349-6152</a></div>
 
-<div class="navbar"><a href="Main.html">Home</a> <a href="https://www.linkedin.com/in/jonathan-lukassen-3a232396/">LinkedIn</a> <a href="https://github.com/JLukassen">GitHub</a> <a href="https://trailblazer.me/id/jlukassen">SalesForce</a><a class="right" href="files/JonathanLukassen.pdf">Resume</a></div>
+<div class="navbar"><a href="Main.html">Home</a><a href="#featured-work">Featured projects</a> <a href="https://www.linkedin.com/in/jonathan-lukassen-3a232396/">LinkedIn</a> <a href="https://github.com/JLukassen">GitHub</a> <a href="https://trailblazer.me/id/jlukassen">SalesForce</a><a class="right" href="files/JonathanLukassen.pdf">Resume</a></div>
+
+
+<section id="featured-work" class="featured-work" aria-labelledby="featured-work-title">
+  <div class="featured-work-inner">
+    <div class="featured-eyebrow">Independent development · Featured work</div>
+    <h2 id="featured-work-title" class="featured-heading">Software, sites & things I've built.</h2>
+    <p class="featured-intro">Projects spanning Android audio engineering, independent software experiments and a bit of K-pop internet culture. Find the apps, repositories and creative work here.</p>
+    <div class="featured-grid">
+      <article class="featured-card">
+        <div class="featured-kicker">01 / Independent studio · In preparation</div>
+        <h3>Yoo Shastan Development</h3>
+        <p>My home for applications, experimental software and future ideas. The dedicated studio website is being prepared at yooshastan.com.</p>
+        <a class="featured-link" href="https://yooshastan.com/" target="_blank" rel="noopener noreferrer">yooshastan.com ↗</a>
+      </article>
+      <article class="featured-card">
+        <div class="featured-kicker">02 / Android · Beta 6 available</div>
+        <h3>Moka Music Player</h3>
+        <p>A high-fidelity Android audio player featuring advanced DSP, lossless playback and optional Navidrome/Subsonic streaming.</p>
+        <a class="featured-link" href="https://github.com/JLukassen/MokaMusicPlayer/releases/tag/v4.0.0-beta06" target="_blank" rel="noopener noreferrer">View project & download beta ↗</a>
+      </article>
+      <article class="featured-card">
+        <div class="featured-kicker">03 / Web · Live</div>
+        <h3>KPOPALYPSE NOW</h3>
+        <p>A colorful, unconventional K-pop-themed website and an ongoing experiment in front-end creativity.</p>
+        <a class="featured-link" href="https://kpopalypsenow.com/" target="_blank" rel="noopener noreferrer">Visit KPOPALYPSE NOW ↗</a>
+      </article>
+    </div>
+  </div>
+</section>
 
 <div class="row">
 <div class="side">
